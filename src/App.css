@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --lightgreen: #2c3a40
+  --darkgreen: #2b7a774d
+  --greenwhite: #def2f1
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn-primary {
+  @apply px-3 py-2 font-bai text-red-300 font-bold rounded;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.btn-secondary {
+  @apply px-3 py-2 font-bai bg-red-300 text-white font-bold rounded;
+}
+
+p {
+  @apply font-inter text-lg;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @apply font-bold font-bai;
+}
+
+h1 {
+  @apply text-7xl;
+}
+h2 {
+  @apply text-5xl;
+}
+h3 {
+  @apply text-3xl;
+}
+h4 {
+  @apply text-2xl;
+}
+h5 {
+  @apply text-xl;
+}
+
+
+.text-primary {
+  @apply text-indigo-700
+}
+
+.text-secondary {
+  @apply text-red-300
+}
+
+.bg-1 {
+  background: url("./assets/bg2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+input, textarea {
+  @apply border-b border-indigo-500
+}
+
+textarea, input:focus-visible {
+  @apply outline-none
+}
+
+.input {
+  @apply flex flex-col w-full
+}
+
+.input label {
+  @apply text-gray-400
+}
+
+.input:focus-within label {
+  @apply text-indigo-500
+}
+
+.img {
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  animation: morph 8s ease-in-out infinite;
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    background: linear-gradient(
+      45deg,
+      #def2f1 0%,
+      #2b7a774d 100%
+    );
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30%;
+    background: linear-gradient(
+      45deg,
+      #2b7a774d 0%,
+      #2b7a774d 100%
+    );
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    background: linear-gradient(
+      45deg,
+      #2b7a774d 0%,
+      #def2f1 100%
+    );
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* .code-wrapper {
+  > :nth-child(1) {
+    opacity: 0.1;
   }
-  to {
-    transform: rotate(360deg);
+  > :nth-child(2) {
+    opacity: 0.3;
   }
-}
+  > :nth-child(3) {
+    opacity: 1;
+  }
+  > :nth-child(4) {
+    opacity: 0.3;
+  }
+  > :nth-child(5) {
+    opacity: 0.1;
+  }
+} */
