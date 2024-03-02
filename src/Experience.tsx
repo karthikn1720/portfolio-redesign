@@ -1,3 +1,4 @@
+import Reveal from "./Reveal";
 import "./experince.css";
 import React from "react";
 
@@ -27,6 +28,14 @@ const Experience = ({ details }: ExperienceProps) => {
               .map((detail) => {
                 return (
                   <section className="CV-timeline CV-job">
+                      <Reveal type="reveal">
+                    <h3 className="mb-2">
+                      <span className="CV-timeline-heading-title">
+                        {detail.designation}{" "}
+                      </span>
+                    </h3>
+                      </Reveal>
+                    <Reveal>
                     <h3 className="CV-timeline-heading">
                       <span className="CV-timeline-heading-title">
                         {detail.company}{" "}
@@ -39,9 +48,12 @@ const Experience = ({ details }: ExperienceProps) => {
                         {detail.yearFrom} - {detail.yearTo}
                       </small>
                     </h3>
+                    </Reveal>
                     <ul className="CV-timeline-details">
                       {detail.desc.map((des) => {
-                        return <li className="CV-job-timeline-item">{des}</li>;
+                        return<Reveal>
+                          <li className="CV-job-timeline-item">{des}</li>
+                        </Reveal> 
                       })}
                     </ul>
                   </section>

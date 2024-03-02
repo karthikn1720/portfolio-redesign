@@ -17,7 +17,7 @@
 }
 
 p {
-  @apply font-inter text-lg;
+  @apply font-inter text-xl;
 }
 
 h1,

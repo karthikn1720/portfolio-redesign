@@ -14,6 +14,8 @@ import sqlLogo from "./assets/postgres.svg";
 import mongoLogo from "./assets/mongodb.svg";
 import csharpLogo from "./assets/csharp.svg";
 import dotnetLogo from "./assets/dotnetcore.svg";
+import Reveal from "./Reveal";
+import RevealOneByOne from "./RevealOneByOne";
 
 function App() {
   const skills = [
@@ -125,7 +127,7 @@ function App() {
           <h1>Skills</h1>
           <div className="flex w-full items-center">
             <div className="flex-1 px-5">
-              <p className="">
+              <p className=" text-2xl">
                 I'm passionate about technology and always strive to stay at the
                 forefront of innovation by learning new technologies and
                 upgrading my skills frequently. In today's rapidly evolving
@@ -134,14 +136,23 @@ function App() {
                 challenges and opportunities to expand my skill set, tackle
                 complex problems, and deliver impactful solutions.{" "}
               </p>
+              <RevealOneByOne>
+              I'm passionate about technology and always strive to stay at the
+                forefront of innovation by learning new technologies and
+                upgrading my skills frequently. In today's rapidly evolving
+                digital landscape, I believe that continuous learning is key to
+                success as a developer. Throughout my career, I've embraced
+                challenges and opportunities to expand my skill set, tackle
+                complex problems, and deliver impactful solutions.
+              </RevealOneByOne>
             </div>
             <div className="flex-1">
               <Skills items={skills} />
             </div>
           </div>
         </section>
-        <section className="px-20 w-dvw h-dvh justify-center text-pri flex flex-col gap-8 items-center">
-          <h1>Experience</h1>
+        <section className="px-20 justify-center text-pri flex flex-col gap-8 items-center">
+          {/* <h1>Experience</h1> */}
           <Experience details={experience} />
         </section>
         <section className="px-20 w-dvw h-dvh justify-center text-pri flex flex-col gap-8 items-center">
@@ -166,6 +177,8 @@ function App() {
             </div>
             <button className="btn-secondary">Submit</button>
           </form>
+        </section>
+        <section>
         </section>
       </body>
     </div>
