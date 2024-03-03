@@ -1,5 +1,4 @@
 .CV-page {
-  max-width: 700px;
   margin: 0 auto;
   padding: 0 2em;
   color: #222222;
@@ -14,14 +13,14 @@
 }
 /* if IE<=7 */
 
-.CV-page\ {
-  width: 1100px;
+/* .CV-page {
   font-family: "Comic Sans MS", "Comic Sans", cursive;
-}
+} */
 
 .CV-secondaryHeading {
   position: relative;
   margin: 2em 0 0;
+  text-align: center;
   text-transform: uppercase;
 }
 /* Grid
@@ -87,7 +86,7 @@
 .CV-timeline-heading-duration {
   display: block;
   font-size: 0.8em;
-  color: #6f6f6f;
+  color: white;
 }
 
 .CV-timeline-details {

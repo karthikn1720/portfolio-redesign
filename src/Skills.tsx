@@ -9,10 +9,6 @@ interface SkillProps {
 }
 
 const animationVariants = {
-  // initial: {
-  //   opacity: 0,
-  //   y: 100,
-  // },
   animate: ({ index, level }: any) => ({
     delay: 0.5 * index,
     width: `${level * 10}%`,

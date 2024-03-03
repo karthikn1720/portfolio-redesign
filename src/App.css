@@ -1,6 +1,5 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+
+@import "./components/styles.css";
 
 :root {
   --lightgreen: #2c3a40
@@ -16,8 +15,12 @@
   @apply px-3 py-2 font-bai bg-red-300 text-white font-bold rounded;
 }
 
-p {
-  @apply font-inter text-xl;
+.h-3dvh {
+  height: 300dvh;
+}
+
+p, span {
+  @apply font-bai;
 }
 
 h1,
@@ -29,28 +32,51 @@ h5 {
 }
 
 h1 {
-  @apply text-7xl;
+  @apply text-4xl;
 }
 h2 {
-  @apply text-5xl;
-}
-h3 {
   @apply text-3xl;
 }
-h4 {
+h3 {
   @apply text-2xl;
 }
-h5 {
+h4 {
   @apply text-xl;
+}
+h5 {
+  @apply text-lg;
+}
+
+.progress {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 5px;
+  bottom: 100px;
+  @apply bg-red-300
 }
 
 
 .text-primary {
-  @apply text-indigo-700
+  @apply bg-gradient-to-r from-indigo-700 to-red-400 inline-block text-transparent bg-clip-text
 }
 
 .text-secondary {
   @apply text-red-300
+}
+
+.text-heading {
+   @apply text-teal-50
+}
+
+.starting-page {
+  height: 100vh;
+  width: 100vw;
+
+  background: url("./assets/4002783-ai.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .bg-1 {

@@ -19,7 +19,7 @@ const Experience = ({ details }: ExperienceProps) => {
       <div className="CV-grid">
         <div className="CV-grid-column">
           <div className="CV-jobs">
-            <h2 className="CV-secondaryHeading CV-jobs-heading">
+            <h2 className="CV-secondaryHeading CV-jobs-heading text-heading">
               Relevant Experience
             </h2>
             {details
@@ -28,32 +28,36 @@ const Experience = ({ details }: ExperienceProps) => {
               .map((detail) => {
                 return (
                   <section className="CV-timeline CV-job">
-                      <Reveal type="reveal">
-                    <h3 className="mb-2">
-                      <span className="CV-timeline-heading-title">
-                        {detail.designation}{" "}
-                      </span>
-                    </h3>
-                      </Reveal>
+                    <Reveal type="reveal">
+                      <h3 className="">
+                        <span className="CV-timeline-heading-title">
+                          {detail.designation}{" "}
+                        </span>
+                      </h3>
+                    </Reveal>
                     <Reveal>
-                    <h3 className="CV-timeline-heading">
-                      <span className="CV-timeline-heading-title">
-                        {detail.company}{" "}
-                      </span>
-                      &#8211;{" "}
-                      <span className="CV-timeline-heading-location">
-                        {detail.location}{" "}
-                      </span>
-                      <small className="CV-timeline-heading-duration">
-                        {detail.yearFrom} - {detail.yearTo}
-                      </small>
-                    </h3>
+                      <h3 className="CV-timeline-heading">
+                        <span className="CV-timeline-heading-title">
+                          {detail.company}{" "}
+                        </span>
+                        &#8211;{" "}
+                        <span className="CV-timeline-heading-location text-white">
+                          {detail.location}{" "}
+                        </span>
+                        <small className="CV-timeline-heading-duration">
+                          {detail.yearFrom} - {detail.yearTo}
+                        </small>
+                      </h3>
                     </Reveal>
                     <ul className="CV-timeline-details">
                       {detail.desc.map((des) => {
-                        return<Reveal>
-                          <li className="CV-job-timeline-item">{des}</li>
-                        </Reveal> 
+                        return (
+                          <Reveal>
+                            <li className="CV-job-timeline-item text-white">
+                              {des}
+                            </li>
+                          </Reveal>
+                        );
                       })}
                     </ul>
                   </section>

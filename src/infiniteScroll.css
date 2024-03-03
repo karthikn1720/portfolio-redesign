@@ -1,0 +1,64 @@
+.logos {
+  overflow: hidden;
+  display: inline-flex;
+  padding: 60px 0;
+  width: 200vw;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+  /* 100% {
+    transform: translateX(100%);
+  } */
+}
+
+.infinite-scroll-wrap:before,
+.infinite-scroll-wrap:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.infinite-scroll-wrap {
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.infinite-scroll-wrap:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.infinite-scroll-wrap:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: flex;
+  width: 200vw;
+  /* padding-right: 50px; */
+  justify-content: space-around;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 50px;
+  /* margin: 0 250px; */
+}
