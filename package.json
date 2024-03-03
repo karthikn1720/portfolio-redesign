@@ -1,7 +1,7 @@
 {
   "name": "portfolio-redesign",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "./",
   "dependencies": {
     "@motionone/utils": "^10.17.0",
