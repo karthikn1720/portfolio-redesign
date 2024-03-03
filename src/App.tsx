@@ -1,14 +1,6 @@
 import "./App.css";
-import CodeHighlight from "./CodeHighLight/CodeHighlight";
 import Skills from "./Skills";
-import {
-  motion,
-  useMotionValue,
-  useScroll,
-  useSpring,
-  useTransform,
-  scroll,
-} from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Experience from "./Experience";
 
 //images
@@ -19,19 +11,14 @@ import nestLogo from "./assets/nestjs.svg";
 import nodeLogo from "./assets/nodejs.svg";
 import sqlLogo from "./assets/postgres.svg";
 import mongoLogo from "./assets/mongodb.svg";
-import csharpLogo from "./assets/csharp.svg";
 import dotnetLogo from "./assets/dotnetcore.svg";
 import a10002 from "./assets/10002.jpg";
-import manSittingInDesk from "./assets/4002783-ai.svg";
-import Reveal from "./Reveal";
 import RevealOneByOne from "./RevealOneByOne";
-import { useEffect, useRef, useState } from "react";
-import InfiniteScroll from "./InfiniteScroll";
+import { useRef, useState } from "react";
 import Atom from "./components/Atom";
 
-import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
+import { ReactLenis } from "@studio-freight/react-lenis";
 import Velocity from "./components/Velocity";
-import ChangeTextColorOneByOne from "./components/ChangeTextColorOneByOne";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
